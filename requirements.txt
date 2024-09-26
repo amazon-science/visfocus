@@ -1,0 +1,17 @@
+torch==2.1.0
+torchvision==0.16.0
+webdataset
+scipy
+sentencepiece
+textdistance
+editdistance
+tensorboard
+tabulate
+s3fs
+datasets
+timm
+tabulate
+einops
+transformers==4.31.0
+deepspeed
+peft

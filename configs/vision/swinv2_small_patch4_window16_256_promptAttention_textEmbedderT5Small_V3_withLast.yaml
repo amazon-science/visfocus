@@ -1,0 +1,25 @@
+model:
+  type: swinv2
+  name: swin_small_patch4_window7_224_22k
+  drop_path_rate: 0.3
+  drop_rate: 0.0
+  swinv2:
+    patch_size: 4
+    in_chans: 3
+    embed_dim: 96
+    depths: [ 2, 2, 18, 2 ]
+    num_heads: [ 3, 6, 12, 24 ]
+    window_size: 24
+    mlp_ratio: 4.
+    qkv_bias: True
+    ape: False
+    patch_norm: True
+    pretrained_window_sizes: [ 0, 0, 0, 0 ]
+    vl_cross_attn_layers: [3]
+    vl_alpha: 0.5
+    lm_d_model: 512
+    text_embedder: t5-small
+    downsampling_method: merge_attention_v3
+  vision_resume_from: https://github.com/SwinTransformer/storage/releases/download/v2.0.0/swinv2_small_patch4_window16_256.pth
+train:
+  use_checkpoint: False

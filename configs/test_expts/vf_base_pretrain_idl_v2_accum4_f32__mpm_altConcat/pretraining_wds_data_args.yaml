@@ -1,0 +1,26 @@
+dataset_root_dir: s3://fm-a-star-data/pre-training
+training_dataset: idl/idl-{00000..01308}.tar
+validation_dataset: idl/idl-01309.tar
+region: us-west-2
+eval_ds_length: 20
+task: donut_pretrain # docvqa
+num_workers: 8
+image_size: [ 1536, 768 ]
+image_patch_size: 64
+max_seq_length: 1480
+smart_order: false
+num_samples: null
+add_space_to_word: true
+use_separator: true
+use_image: true
+add_question: false # true
+s3_handler: false  # true
+
+# pretraining regime
+pretraining_task: PromptMasking # T5MLM or SuffixPred
+noise_density: 0.15 # how much of the input should be masked
+mean_noise_span_length: 4 # average length of the span
+prompt_length: 50
+
+labels_as_full_text: false # if to predict the ocr as is and not the ids and corresponding span
+template: <extra_id_{}> # template to use for the llm span mask identifier or otherwise known as sentinal ids (T5 uses <extra_id_1>) null uses numbers

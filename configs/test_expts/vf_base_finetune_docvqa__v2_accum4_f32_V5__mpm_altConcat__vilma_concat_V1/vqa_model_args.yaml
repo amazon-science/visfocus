@@ -1,0 +1,16 @@
+initializer_factor: 1.0
+initializer_range: 0.02
+
+model_class: visfocus.models.vf_models.VisFocus_MPM_VQA_CONCAT_LV
+
+visfocus:
+  max_seq_length: 2048
+  generate_max_new_tokens_len: 256
+
+  model_name_or_path: /mnt/efs/ofirab/experiments/./text-haifa-nivnay-p4-us2/expts/models/swinv2_t5endec/swin_small_t5_base/pretrain_idl_v2_accum4_f32__mpm_altConcat/checkpoint-400000/
+  model:
+    variant: vf-base
+    vision: configs/vision/swinv2_small_patch4_window16_256_promptAttention_textEmbedderT5Base_V3_withLast.yaml
+  image_size: [ 1536, 768 ]
+  seed: 42
+  do_lower_case: True

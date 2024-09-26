@@ -1,0 +1,15 @@
+name: hw_squad
+
+task: hw_squad
+num_workers: 8
+image_size: [ 1536 , 768 ]
+max_seq_length: 2048
+
+smart_order: false
+use_separator: true
+use_image: true
+detract_question_from_encoder: True
+input_answer_to_llm: true
+
+question_prompt: ""
+answer_prompt: ""

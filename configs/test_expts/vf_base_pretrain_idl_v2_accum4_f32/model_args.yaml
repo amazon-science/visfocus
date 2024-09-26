@@ -1,0 +1,17 @@
+initializer_factor: 1.0
+initializer_range: 0.02
+
+model_class: visfocus.models.vf_models.VisFocus
+
+visfocus:
+  max_seq_length: 2048
+  generate_max_new_tokens_len: 2048
+
+  model_name_or_path: t5-base
+  model:
+    model_name_or_path: t5-base
+    vision: configs/vision/swinv2_small_patch4_window16_256.yaml
+
+  image_size: [ 1536, 768 ]
+  seed: 42
+  do_lower_case: True

@@ -1,0 +1,20 @@
+model:
+  type: swinv2
+  name: swinv2_tiny_patch4_window16_256
+  drop_path_rate: 0.2
+  drop_rate: 0.0
+  swinv2:
+    patch_size: 4
+    in_chans: 3
+    embed_dim: 96
+    depths: [ 2, 2, 6, 2 ]
+    num_heads: [ 3, 6, 12, 24 ]
+    window_size: 16
+    mlp_ratio: 4.
+    qkv_bias: True
+    ape: False
+    patch_norm: True
+    pretrained_window_sizes: [ 0, 0, 0, 0 ]
+  vision_resume_from: https://github.com/SwinTransformer/storage/releases/download/v2.0.0/swinv2_tiny_patch4_window16_256.pth
+train:
+  use_checkpoint: False
