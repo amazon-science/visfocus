@@ -12,6 +12,6 @@ datasets
 timm
 tabulate
 einops
-transformers==4.31.0
+transformers==4.38.0
 deepspeed
 peft
