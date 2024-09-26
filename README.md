@@ -65,7 +65,7 @@ VisFocus
 * * *
 ## Enviroment Setup
 ```
-> git clone VISFOCUS_REPO
+> git clone https://github.com/amazon-science/visfocus.git
 > conda create -n vf python=3.8.10 -y
 > conda activate vf
 > cd VisFocus/
@@ -209,9 +209,10 @@ This project is licensed under the Apache-2.0 License.
 
 * * *
 ## Citation
+
     @article{abramovich2024visfocus,
-      title={VisFocus: Prompt-Guided Vision Encoders for OCR-Free Dense Document Understanding},
-      author={},
-      journal={},
+      title={VisFocus: Prompt-guided vision encoders for OCR-free dense document understanding},
+      author={Abramovich, Ofir and Nayman, Niv and Fogel, Sharon and Lavi, Inbal and Litman, Ron and Tsiper, Shahar and Tichauer, Royee and Appalaraju, Srikar and Mazor, Shai and Manmatha, R},
+      journal={arXiv preprint arXiv:2407.12594},
       year={2024}
     }
