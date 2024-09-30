@@ -20,7 +20,7 @@ We pair the architecture enhancements with a novel pre-training task, using lang
 Our experiments demonstrate that this prompt-guided visual encoding approach significantly improves performance, achieving state-of-the-art results on various benchmarks.
 \
 \
-![Teaser Figure](figs/teaser.png){ width=75% style="display: block; margin: 0 auto"}
+![Teaser Figure](figs/teaser.png)
 
 This is an official PyTorch implementation of the paper [VisFocus: Prompt-Guided Vision Encoders for OCR-Free Dense Document Understanding](ARXIV_LINK)
 
@@ -50,7 +50,7 @@ VisFocus
 
 * * *
 ## Model Architecture
- ![Model Architecture](figs/arch.png){ width=75% style="display: block; margin: 0 auto"}
+ ![Model Architecture](figs/arch.png)
 
 *VisFocus* enables the vision model to better align visual features to the input prompt. Unlike previous approaches, VisFocus inputs the prompt not only to the language model, but to the vision encoder as well. This is done using ViLMA layer, a Vision-Language Merging Layres, trained to model the visual document features with respect to the input question.
 
@@ -94,7 +94,7 @@ deepspeed --num_gpus=8 scripts/train_vqa_model_from_config.py
 
 * * *
 ## Training and Evaluation
- ![Model Architecture](figs/stages.png){ style="display: block; margin: 0 auto"}
+ ![Model Architecture](figs/stages.png)
 
 VisFocus utilizes pretrained SwinV2 (on IN) and T5 (on C4) as vision and language components.
 The first pre-training stage (refered as LtR) shifts the visual domain and grants the model reading capabilities.
