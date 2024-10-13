@@ -123,22 +123,12 @@ For Stage-I pre-training, run:
 
 See `./config` directory for more details.
 
-<u>Pretrained Checkpoints:</u>
-| VisFocus-S   | VisFocus-B  |
-|:---:|:---:|
-| [download]() | [download]() |
-
 #### LMPM Pre-training (stage II)
 For Stage II pre-training, run:
 
 `> ./scripts/pretrain_ds.sh expts/pretrain_idl_v2_accum4_f32__mpm_altConcat`
 This will  load Stage I pretrained checkpoint and start training Stage II.
 
-<u>Pretrained Checkpoints:</u>
-| | VisFocus-S   | VisFocus-B  |
-|:---:|:---:|:---:|
-| .pth | [download]() | [download]() |
-| HF Hub | - | `ofir1080/visfocus-base` |
 
 #### Fintuning (stage III)
 For VQA fine-tuning, run:
@@ -156,6 +146,7 @@ For every dataset run the following:
 * The scripts are benchmark-specific, since different metrics and test/val sets are defined for different benchmarks
 
 #### Inference using HuggingFace
+
 will be avialable soon
 ```
 
@@ -166,38 +157,38 @@ will be avialable soon
 
 ### DocVQA
 [Dataset link](https://www.docvqa.org/datasets)
-| Method        | Resolution    | LtR   | LMPM  | ANLS  | Checkpoint | HF |
+| Method        | Resolution    | LtR   | LMPM  | ANLS  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| VisFocus-S    |1536 x 768     |&check;|&check;| 68.6  | [download]() | `ofir1080/visfocus-small-docvqa` |
-| VisFocus-B    |1536 x 768    |&check;|&check;| 72.9   | [download]() | `ofir1080/visfocus-base-docvqa` |
+| VisFocus-S    |1536 x 768     |&check;|&check;| 68.6  |
+| VisFocus-B    |1536 x 768    |&check;|&check;| 72.9   |
 
 ### InfographicVQA
 [Dataset link](https://www.docvqa.org/datasets/infographicvqa)
-| Method        | Resolution    | LtR   | LMPM  | ANLS  | Checkpoint |
+| Method        | Resolution    | LtR   | LMPM  | ANLS  |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| VisFocus-S    |1536 x 768     |&check;|&check;| 28.5  | [download]() |
-| VisFocus-B    |1536 x 768    |&check;|&check;| 31.9   | [download]() |
+| VisFocus-S    |1536 x 768     |&check;|&check;| 28.5  |
+| VisFocus-B    |1536 x 768    |&check;|&check;| 31.9   |
 
 ### ChartQA
 [Dataset link](https://github.com/vis-nlp/ChartQA)
 | Method        | Resolution    | LtR   | LMPM  | Rlaxed Acc.  | Checkpoint |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| VisFocus-S    |1536 x 768     |&check;|&check;| 53.0  | [download]() |
-| VisFocus-B    |1536 x 768    |&check;|&check;| 57.1   | [download]() |
+| VisFocus-S    |1536 x 768     |&check;|&check;| 53.0  |
+| VisFocus-B    |1536 x 768    |&check;|&check;| 57.1   |
 
 ### OCR-VQA
 [Dataset link](https://github.com/vis-nlp/ChartQA)
 | Method        | Resolution    | LtR   | LMPM  | Exact Match  | Checkpoint |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| VisFocus-S    |1536 x 768     |&check;|&check;| 67.3  | [download]() |
-| VisFocus-B    |1536 x 768    |&check;|&check;| 70.0   | [download]() |
+| VisFocus-S    |1536 x 768     |&check;|&check;| 67.3  |
+| VisFocus-B    |1536 x 768    |&check;|&check;| 70.0   |
 
 ### AI2D
 [Dataset link](https://github.com/vis-nlp/ChartQA)
 | Method        | Resolution    | LtR   | LMPM  | Exact Match  | Checkpoint |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| VisFocus-S    |1536 x 768     |&check;|&check;| 42.6  | [download]() |
-| VisFocus-B    |1536 x 768    |&check;|&check;| 47.8   | [download]() |
+| VisFocus-S    |1536 x 768     |&check;|&check;| 42.6  |
+| VisFocus-B    |1536 x 768    |&check;|&check;| 47.8   |
 
 ## Security
 
